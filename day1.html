@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙德里安</title>
+</head>
+
+<body>
+    <h3 style="text-align: center;">Day1 ✨蒙德里安</h3>
+    <div class="container" style="display: flex; justify-content: center;">
+        <canvas id="drawing" width="140px" height="140px"></canvas>
+    </div>
+    <script>
+        let drawing = document.getElementById('drawing')
+
+        if (drawing.getContext) {
+            // 获取上下文
+            let context = drawing.getContext('2d')
+
+            // 绘制红色矩形矩形
+            context.strokeStyle = 'black'
+            context.lineWidth = 2
+            context.strokeRect(20, 20, 70, 70)
+            context.fillStyle = 'red'
+            context.fillRect(20, 20, 70, 70)
+
+            // 绘制黄色矩形
+            context.strokeStyle = 'black'
+            context.lineWidth = 2
+            context.strokeRect(20, 90, 30, 20)
+            context.fillStyle = 'yellow'
+            context.fillRect(20, 90, 30, 20)
+
+            // 绘制矩形
+            context.strokeStyle = 'black'
+            context.lineWidth = 2
+            context.strokeRect(20, 110, 30, 10)
+            context.fillStyle = 'white'
+            context.fillRect(20, 110, 30, 10)
+
+            // 绘制矩形
+            context.strokeStyle = 'black'
+            context.lineWidth = 2
+            context.strokeRect(50, 90, 40, 30)
+            context.fillStyle = 'white'
+            context.fillRect(50, 90, 40, 30)
+
+            // 绘制矩形
+            context.strokeStyle = 'black'
+            context.lineWidth = 2
+            context.strokeRect(90, 20, 30, 30)
+            context.fillStyle = 'white'
+            context.fillRect(90, 20, 30, 30)
+
+            // 绘制矩形
+            context.strokeStyle = 'black'
+            context.lineWidth = 2
+            context.strokeRect(90, 50, 30, 40)
+            context.fillStyle = 'white'
+            context.fillRect(90, 50, 30, 40)
+
+            // 绘制蓝色矩形
+            context.strokeStyle = 'black'
+            context.lineWidth = 2
+            context.strokeRect(90, 90, 30, 30)
+            context.fillStyle = 'blue'
+            context.fillRect(90, 90, 30, 30)
+        }
+    </script>
+</body>
+
+</html>
