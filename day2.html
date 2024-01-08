@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 style="text-align: center;">Day2 🎄红白圣诞树</h3>
+    <div class="container" style="display: flex; justify-content: center;">
+        <canvas id="drawing" width="245px" height="320px" style="background-color: black;"></canvas>
+    </div>
+
+    <script>
+        let drawing = document.getElementById('drawing')
+
+        if (drawing.getContext) {
+            let ctx = drawing.getContext('2d')
+            // 绘制函数
+            function drawCircle(x, y, r, isEven) {
+                ctx.beginPath()
+                // 绘制白圆
+                ctx.arc(x, y, r, 0, 2 * Math.PI, false)
+                // 描边路径
+                ctx.stroke()
+                // 填充圆
+                ctx.fillStyle = 'white'
+                ctx.fill()
+                // 关闭路径
+                ctx.closePath()
+
+                ctx.beginPath()
+                // 绘制红元
+                ctx.arc(x, y, Math.floor(r / 2) - 1, 0, 2 * Math.PI, false)
+                // 填充圆
+                ctx.fillStyle = '#960404'
+                ctx.fill()
+
+                ctx.beginPath()
+                // 绘制切割矩形
+                ctx.fillStyle = 'black'
+                if (isEven) {
+                    ctx.fillRect(x, y - r, -r, r)
+                } else {
+                    ctx.fillRect(x, y - r, r, r)
+                }
+                ctx.closePath()
+            }
+            // 绘制
+            drawCircle(100, 220, 99, false)
+            drawCircle(175, 120, 69, true)
+            drawCircle(120, 50, 49, false)
+        }
+
+
+
+    </script>
+</body>
+
+</html>
