@@ -23,6 +23,20 @@
             ctx.fillStyle = 'white'
             ctx.fillText('Armin', 0, 0)
             ctx.fillText('H  fmann', 0, 50)
+            ctx.beginPath()
+            ctx.arc(50, 75, 13, 0, 2 * Math.PI, false)
+            ctx.fill()
+            ctx.closePath()
+            ctx.beginPath()
+            ctx.arc(50, 75, 8, 0, 2 * Math.PI, false)
+            ctx.fillStyle = '#960404'
+            ctx.fill()
+            ctx.closePath()
+            ctx.beginPath()
+            // 绘制切割矩形
+            ctx.fillStyle = 'black'
+            ctx.fillRect(37, 62, 13, 13)
+            ctx.closePath()
         }
     </script>
 </body>
