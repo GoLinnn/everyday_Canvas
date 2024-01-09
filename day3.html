@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘制文本</title>
+</head>
+
+<body>
+    <h3 style="text-align: center;">Day3 🎇文字</h3>
+    <div class="container" style="display: flex; justify-content: center;">
+        <canvas id="drawing" width="245px" height="320px" style="background-color: black;"></canvas>
+    </div>
+    <script>
+        let drawing = document.getElementById('drawing')
+        if (drawing.getContext) {
+            let ctx = drawing.getContext('2d')
+            ctx.font = 'bold 50px Arial'
+            ctx.textAlign = 'start'
+            ctx.textBaseline = 'top'
+            ctx.fillStyle = 'white'
+            ctx.fillText('Armin', 0, 0)
+            ctx.fillText('H  fmann', 0, 50)
+        }
+    </script>
+</body>
+
+</html>
